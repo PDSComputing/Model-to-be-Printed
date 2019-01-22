@@ -1,0 +1,32 @@
+// These are the stand and the arm that will be attached to the servo in order to operate our Rube Goldberg Machine
+//For this I created a cube structure, were each rectangular cuboid is made up of multiple 10,10,10 cubes
+
+cubesize = 10;
+length = 100;
+height = 100;
+//100 = 10 cubes long on the x axis 
+//100 = 10 cubes high on the z axis
+   
+ // This for loop allowed me to create the rectangular cuboids by stepping the squares
+ 
+ 
+    for (wall = [0 : cubesize :  length]){
+//It is moved 0 space on the z axis, cubesize or 10 on the y axis, and length or 100 on the x axis 
+     translate([wall,0,0])
+        cube(size = cubesize, center = false);
+// Cube, setting the size of the cube to cubesize is calling on an already defined variable, in this example cubesize = 10 so the size of the cube created will be 10
+   }
+   
+  }
+
+ }
+ 
+ for (wall = [0 : .1 :  141.4]){
+    translate([wall,0,0])
+//It is moved 0 space on the z axis, cubesize or 10 on the y axis, and length or 11 on the x axis 
+     translate([0,100,0]) 
+//It is moved 0 space on the z axis, 100 on the y axis, and 0 on the x axis 
+        cube(size = cubesize, center = false);
+// Cube, setting the size of the cube to cubesize is calling on an already defined variable, in this example cubesize = 10 so the size of the cube created will be 10
+     
+ }
